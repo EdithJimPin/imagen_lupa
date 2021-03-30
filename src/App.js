@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment} from 'react';
+import dj from './img/dj.jpg';
+import {
+  Magnifier,
+  GlassMagnifier,
+  SideBySideMagnifier,
+  PictureInPictureMagnifier,
+  MOUSE_ACTIVATION,
+  TOUCH_ACTIVATION
+} from "react-image-magnifiers";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <h1>Imagen con lupa</h1>
+      <GlassMagnifier
+        imageSrc={dj}
+        imageAlt="dj"
+      />
+    </Fragment>
   );
 }
 
